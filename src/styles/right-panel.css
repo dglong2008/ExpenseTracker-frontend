@@ -1,0 +1,82 @@
+/* src/styles/right-panel.css */
+
+/* Tab Navigation */
+.tabs-container {
+    display: flex;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+    background-color: #F9FAFB;
+    /* Very light gray to house the tabs */
+    padding: 6px;
+    border-radius: var(--radius-pill);
+    width: max-content;
+}
+
+.tab-btn {
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-family: var(--font-family);
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background-color: var(--bg-base);
+    color: var(--primary-black);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Expense List & Hover State */
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.expense-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-card);
+    border: 1px solid #F3F4F6;
+    background-color: var(--bg-base);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.expense-row:hover {
+    box-shadow: var(--shadow-soft);
+    border-color: #E5E7EB;
+}
+
+/* The Edit Button stays invisible until the row is hovered */
+.edit-btn {
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--primary-black);
+    color: var(--bg-base);
+    border: none;
+    border-radius: var(--radius-pill);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.expense-row:hover .edit-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header Controls */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+}

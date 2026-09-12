@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors */
+    --bg-base: #FFFFFF;
+    --primary-orange: #FF7A00;
+    --primary-black: #000000;
+    --secondary-purple: #8B5CF6;
+    --text-main: #111827;
+    --text-muted: #6B7280;
+    --error-red: #EF4444;
+
+    /* Typography */
+    --font-family: 'Inter', sans-serif;
+    --line-height-body: 1.5;
+    --letter-spacing-heading: -0.02em;
+
+    /* Spacing (8px grid) & Radii */
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-4: 32px;
+    --spacing-8: 64px;
+    --radius-card: 24px;
+    --radius-pill: 9999px;
+
+    /* Layout */
+    --max-width: 1200px;
+
+    /* Shadows */
+    --shadow-float: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+    --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    line-height: var(--line-height-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Global Toast Animation */
+.toast-notification {
+    position: fixed;
+    bottom: var(--spacing-3);
+    right: var(--spacing-3);
+    background-color: var(--primary-black);
+    color: var(--bg-base);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-float);
+    animation: slideUp 0.3s ease-out forwards;
+    z-index: 50;
+    font-weight: 500;
+}
+
+.toast-notification.error {
+    background-color: var(--error-red);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,45 @@
+/* src/styles/dashboard.css */
+.dashboard-page {
+    min-height: 100vh;
+    padding: var(--spacing-4);
+    background-color: var(--bg-base);
+}
+
+.dashboard-container {
+    max-width: var(--max-width);
+    /* 1200px */
+    margin: 0 auto;
+    /* Centers the container */
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    /* Left panel fixed 380px, Right panel takes the rest */
+    gap: var(--spacing-4);
+    align-items: start;
+}
+
+.dashboard-card {
+    background-color: var(--bg-base);
+    border: 1px solid #F3F4F6;
+    /* Extremely faint border to define edges */
+    padding: var(--spacing-4);
+    border-radius: var(--radius-card);
+    /* 24px extreme rounding */
+    box-shadow: var(--shadow-soft);
+    /* Diffuse drop shadow */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: var(--spacing-3);
+    letter-spacing: var(--letter-spacing-heading);
+}
+
+/* Responsive collapse for smaller screens */
+@media (max-width: 900px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        /* Stack columns on small screens */
+    }
+}

@@ -1,0 +1,104 @@
+/* src/styles/components.css */
+
+/* Reusable Input Form Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-3);
+    width: 100%;
+    flex: 1;
+    /* Magic property: forces elements in a flex row to split space 50/50 */
+}
+
+.input-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-left: var(--spacing-2);
+    /* Slight indent to align with rounded input */
+}
+
+.input-field {
+    width: 100%;
+    /* Prevents the input from overflowing its parent */
+    padding: var(--spacing-2) var(--spacing-3);
+    border: 2px solid #E5E7EB;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.1);
+}
+
+/* Reusable Pill Button */
+.btn {
+    width: 100%;
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    text-align: center;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    /* Satisfying click effect */
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-black {
+    background-color: var(--primary-black);
+    color: var(--bg-base);
+}
+
+.btn-black:hover:not(:disabled) {
+    background-color: #333333;
+}
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: var(--bg-base);
+}
+
+.btn-orange:hover:not(:disabled) {
+    background-color: #E66A00;
+}
+
+/* Add to src/styles/components.css */
+.select-field {
+    width: 100%;
+    /* Modify the padding to add 36px to the right side specifically */
+    padding: var(--spacing-2) 36px var(--spacing-2) var(--spacing-3);
+    border: 2px solid #E5E7EB;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    outline: none;
+    appearance: none;
+    /* Removes default browser dropdown arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    cursor: pointer;
+    background-color: white;
+}
+
+.select-field:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.1);
+}

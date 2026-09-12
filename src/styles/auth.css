@@ -1,0 +1,53 @@
+/* src/styles/auth.css */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-base);
+    /* Stark white background */
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--bg-base);
+    padding: var(--spacing-8) var(--spacing-4);
+    border-radius: var(--radius-card);
+    /* 24px heavily rounded edges */
+    box-shadow: var(--shadow-float);
+    /* Makes the card appear floating */
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing-heading);
+    margin-bottom: var(--spacing-1);
+}
+
+.auth-subtitle {
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-4);
+}
+
+.auth-form {
+    text-align: left;
+}
+
+.auth-link {
+    color: var(--primary-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+.auth-footer {
+    margin-top: var(--spacing-3);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
